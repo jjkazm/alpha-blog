@@ -9,6 +9,10 @@ ruby '2.5.1'
 gem "haml"
 gem "haml-rails", "~> 1.0"
 
+#Use Bootstrap 3
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'jquery-rails'
+
 
 
 
