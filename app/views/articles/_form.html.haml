@@ -1,10 +1,4 @@
-- if @article.errors.any?
-  %h2 Following errors prevented article from getting created
-  - @article.errors.full_messages.each do |msg|
-    %ul
-      %li
-        =msg
-
+= render "shared/errors", obj: @article
 .row
   .col-xs-12
     = form_for @article do |f|
