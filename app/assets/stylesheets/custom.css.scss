@@ -6,6 +6,10 @@ $navbar-default-bg: #000;
 body{
    overflow-x:hidden;
 }
+.wrap{
+   position: relative;
+   min-height: 100vh;
+}
 
 #logo{
   float: left;
@@ -24,7 +28,7 @@ body{
 .jumbotron {
   background: asset-url('brick.png') center;
   background-size:        cover;
-  height:     550px;
+  height:     75vh;
 }
 .jumbotron h1 {
   color:                #fff;
@@ -37,7 +41,6 @@ body{
   background-color: black;
 }
 footer{
-  margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #999;
   color: #3b3c3d;
@@ -47,6 +50,14 @@ footer{
   right: 0;
   padding: 5px 40px 0 40px;
   background-color: #efefef;
+}
+.footer-wrap{
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 36px;
+  margin-top: 45px;
 }
 footer ul{
     list-style: none;
@@ -60,13 +71,23 @@ footer a{
   color: #3b3c3d;
 }
 footer a:hover {
-  color: #666;
+  color: #9c9c9c;
   text-decoration: none;
-
 }
 
 .article-actions{
-  border-top: 1px solid #999;
+  border-top: 1px solid #9c9c9c;
   padding-top: 20px;
   margin-top: 30px;
+  position: relative;
+}
+
+.article-title{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.article-body{
+  border-top: 1px solid #9c9c9c;
+  padding: 15px 0;
 }
