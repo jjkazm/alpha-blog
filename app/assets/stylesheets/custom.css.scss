@@ -74,11 +74,16 @@ footer a:hover {
   color: #9c9c9c;
   text-decoration: none;
 }
+.article-meta-details{
+  border-top: 1px solid #9c9c9c;
+  margin-top: 30px;
+  padding-top: 5px;
+}
 
 .article-actions{
   border-top: 1px solid #9c9c9c;
-  padding-top: 20px;
-  margin-top: 30px;
+  padding-top: 10px;
+  margin-top: 10px;
   position: relative;
 }
 
@@ -89,5 +94,5 @@ footer a:hover {
 
 .article-body{
   border-top: 1px solid #9c9c9c;
-  padding: 15px 0;
+  padding: 15px 0 0 0;
 }
