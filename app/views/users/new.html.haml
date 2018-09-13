@@ -1,0 +1,28 @@
+= render "shared/errors", obj: @user
+%h2{:align => "center"} Create new user
+.row
+  .col-xs-12
+    = form_for @user do |f|
+      .form-horizontal
+        .form-group
+          .control-label.col-sm-3
+            = f.label :username
+          .col-sm-9
+            = f.text_field :title, class: "form-control", placeholder: "Enter username", autofocus: true
+        .form-group
+          .control-label.col-sm-3
+            = f.label :title
+          .col-sm-9
+            = f.email_field :email, class: "form-control", placeholder: "Enter email", autofocus: true
+        .form-group
+          .control-label.col-sm-3
+            = f.label :title
+          .col-sm-9
+            = f.password_field :password, class: "form-control", placeholder: "Enter password", autofocus: true
+        .form-group
+          .col-sm-12.col-sm-offset-3
+            =f.submit "Create user", class: "btn btn-success"
+        .col-xs-4.col-xs-offset-5
+          [
+          =link_to "Back to listings", articles_path
+          ]
