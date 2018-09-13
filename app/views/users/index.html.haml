@@ -1,5 +1,6 @@
 %h1{:align => "center"} Best Bloggers
 %div{:align => "center"}
+  =will_paginate
   - @users.each do |u|
     %ul.listing
       .row
@@ -11,3 +12,4 @@
           %li
             %small
               =pluralize(u.articles.count, "article") if u.articles
+  =will_paginate @user_articles

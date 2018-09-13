@@ -15,6 +15,10 @@ gem 'jquery-rails'
 # Use bcrypt
 gem "bcrypt"
 
+#Pagination
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
 
 
 

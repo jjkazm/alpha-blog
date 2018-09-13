@@ -1,6 +1,10 @@
 %h1{:align => "center"} Listing all the articles
+%div{:align => "center"}
+  =will_paginate
 .row
   .col-xs-8.col-xs-offset-2
     %p
       = link_to "Create new article", new_article_path
 =render 'article', obj: @articles
+%div{:align => "center"}
+  =will_paginate
