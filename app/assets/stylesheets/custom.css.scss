@@ -1,8 +1,8 @@
 $navbar-default-bg: #000;
-
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+$line-color: #9c9c9c;
 body{
    overflow-x:hidden;
 }
@@ -42,7 +42,7 @@ body{
 }
 footer{
   padding-top: 5px;
-  border-top: 1px solid #999;
+  border-top: 1px solid $line-color;
   color: #3b3c3d;
   position: absolute;
   bottom: 0;
@@ -50,6 +50,22 @@ footer{
   right: 0;
   padding: 5px 40px 0 40px;
   background-color: #efefef;
+
+  ul{
+      list-style: none;
+      float: right;
+      li{
+          float: left;
+          margin-left: 15px;
+      }
+    }
+    a{
+      color: #3b3c3d;
+    }
+    a:hover {
+      color: #9c9c9c;
+      text-decoration: none;
+    }
 }
 .footer-wrap{
   position: fixed;
@@ -59,29 +75,14 @@ footer{
   height: 36px;
   margin-top: 45px;
 }
-footer ul{
-    list-style: none;
-    float: right;
-}
-footer ul li{
-    float: left;
-    margin-left: 15px;
-}
-footer a{
-  color: #3b3c3d;
-}
-footer a:hover {
-  color: #9c9c9c;
-  text-decoration: none;
-}
 .article-meta-details{
-  border-top: 1px solid #9c9c9c;
+  border-top: 1px solid $line-color;
   margin-top: 30px;
   padding-top: 5px;
 }
 
 .article-actions{
-  border-top: 1px solid #9c9c9c;
+  border-top: 1px solid $line-color;
   padding-top: 10px;
   margin-top: 10px;
   position: relative;
@@ -93,7 +94,7 @@ footer a:hover {
 }
 
 .article-body{
-  border-top: 1px solid #9c9c9c;
+  border-top: 1px solid $line-color;
   padding: 15px 0 0 0;
 }
 
