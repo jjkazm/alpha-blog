@@ -1,1 +1,30 @@
-%h1 ABOUT 
+%h1.well About the AlphaBlog page
+.container
+  .row
+    .col-xs-7
+      %p
+        This website is created by
+        =link_to "Jakub Kazmierczak","https://github.com/jjkazm"
+        based on
+        =link_to  "Udemy course", "https://www.udemy.com/the-complete-ruby-on-rails-developer-course"
+      %hr
+      %p It was crated on "code-along" basis, but includes the below changes:
+      %ul
+        %li HAML language instead of ERB
+        %li included SCSS elements in styling
+        %li added ordering of listed articles and users
+        %li variables names changed in order to keep developer focused on code logic;)
+        %li minor styling changes
+      %hr
+      %p Technologies/tools used:
+      %ul
+        %li Ruby 2.5.1
+        %li Rails 5.2.1
+        %li PostgreSQL 10.5
+        %li Bootstrap 3.3.7
+        %li haml
+        %li SASS
+        %li bcrypt
+        %li Gravatar
+    .col-xs-5
+      =image_tag("https://s.gravatar.com/avatar/b8edb640bcb3fab0bceabb7ae8b78037?s=200", class:"img-rounded")

@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     end
   end
   def show
-    @user_articles = @user.articles.paginate(page: params[:page], per_page:5)
+    @user_articles = @user.articles.paginate(page: params[:page], per_page:5).order(updated_at: :desc)
   end
 
   private
@@ -46,5 +46,6 @@ class UsersController < ApplicationController
   def require_same_user
     if current_user != @user
       flash[:danger] = "you can only edit your own account"
+    end
   end
 end
