@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:success] = "User #{@user.username} was succesfully created"
       session[:user_id] = @user.id
-      redirect_to articles_path
+      redirect_to user_path(@user)
     else
       render 'new'
     end
@@ -44,7 +44,7 @@ class UsersController < ApplicationController
   end
 
   def require_same_user
-    if current_user != @user
+    if current_user != @user && !@user.admin?
       flash[:danger] = "you can only edit your own account"
     end
   end

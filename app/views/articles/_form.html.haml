@@ -2,21 +2,20 @@
 .row
   .col-xs-12
     = form_for @article do |f|
-      .form-horizontal
-        .form-group
-          .control-label.col-sm-3
-            = f.label :title
-          .col-sm-9
-            = f.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true
-        .form-group
-          .control-label.col-sm-3
-            = f.label :description
-          .col-sm-9
-            = f.text_area :description, rows: 10, class: "form-control", placeholder: "Put your article here", autofocus: true
-        .form-group
-          .col-sm-12.col-sm-offset-3
-            =f.submit class: "btn btn-success"
-        .col-xs-4.col-xs-offset-5
-          [
-          =link_to "Back to listings", articles_path
-          ]
+      .form-group
+        .control-label.col-sm-3
+          = f.label :title
+        .col-sm-9.form-control
+          = f.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true
+      .form-group
+        .control-label.col-sm-3
+          = f.label :description
+        .col-sm-9
+          = f.text_area :description, rows: 10, class: "form-control", placeholder: "Put your article here", autofocus: true
+      .form-group
+        .col-sm-12.col-sm-offset-3
+          =f.submit class: "btn btn-success"
+      .col-xs-4.col-xs-offset-5
+        [
+        =link_to "Back to listings", articles_path
+        ]
