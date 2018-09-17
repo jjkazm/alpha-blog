@@ -1,7 +1,10 @@
 %h1{:align => "center"}Welcome to profile of #{@user.username}
 .row
   .col-md-4.col-md-offset-4.center
-    =gravatar_for @user, 200
+    %div
+      = gravatar_for @user, 200
+    %div
+      = link_to "Delete user", user_path, method: :destroy, class: "btn btn-danger btn-xs margin"
 %h4{:align => "center"} #{@user.username}'s articles:
 %div{:align => "center"}
   =will_paginate @user_articles
