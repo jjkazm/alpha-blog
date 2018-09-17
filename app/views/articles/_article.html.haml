@@ -5,7 +5,7 @@
         .article-title
           = link_to art.title, article_path(art)
         .article-body
-          =truncate(art.description, length: 100)
+          = truncate(art.description, length: 100)
           %br
           .article-meta-details
             %small
@@ -17,7 +17,7 @@
               ago
         - if logged_in? && ( current_user == art.user || current_user.admin? )
           .article-actions
-            =link_to "Edit article", edit_article_path(art), class: "btn btn-success"
-            =link_to "Delete article", article_path(art), method: :delete,
+            = link_to "Edit article", edit_article_path(art), class: "btn btn-success"
+            = link_to "Delete article", article_path(art), method: :delete,
                       data: {confirm: "Are you sure you want to delete the article?"},
                       class: "btn btn-danger"

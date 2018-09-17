@@ -8,7 +8,7 @@
 
 
 # add Users
-User.create!(username: "Kuba", email: "jjkazm@gmail.com", password:"haslo")
+User.create!(username: "Kuba", email: "jjkazm@gmail.com", password:"haslo", admin: true)
 5.times do
   User.create!(username: Faker::Internet.unique.username, email: Faker::Internet.unique.safe_email, password:"haslo")
 end
