@@ -1,0 +1,18 @@
+%h1.center Add new category
+
+= render "shared/errors", obj: @category
+
+= form_for @category do |f|
+  .form-horizontal
+    .form-group
+      .control-label.col-sm-3
+        = f.label :name
+      .col-sm-9
+        = f.text_field :name, class: "form-control", placeholder: "Category name", autofocus: true
+    .form-group
+      .col-sm-12.col-sm-offset-3
+        =f.submit class: "btn btn-success"
+    .col-xs-4.col-xs-offset-5
+      [
+      =link_to "Back to listings", categories_path
+      ]
