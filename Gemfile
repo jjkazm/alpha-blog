@@ -22,6 +22,9 @@ gem 'bootstrap-will_paginate'
 #Fake name and emails
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
+# Use controller testing
+gem 'rails-controller-testing'
+
 
 
 
