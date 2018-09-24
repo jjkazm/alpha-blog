@@ -17,6 +17,8 @@
     %strong Description:
   %hr
   =simple_format(@article.description)
+  -if @article.categories.any?
+    = render 'categories/category', obj: @article.categories
   .article-actions
     - if logged_in? && (current_user == @article.user || current_user.admin?)
       =link_to "Edit article", edit_article_path(@article), class: "btn btn-success"

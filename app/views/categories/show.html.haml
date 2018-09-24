@@ -1,0 +1,9 @@
+%h1.center
+  Category: #{@category.name}
+-#
+  .center
+    =will_paginate @category_articles
+= render 'articles/article', obj: @category_articles
+-#
+  .center
+    =will_paginate @category_articles

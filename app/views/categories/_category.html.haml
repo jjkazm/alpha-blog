@@ -1,0 +1,5 @@
+%p
+  Categories:
+  - obj.each do |cat|
+    %span.badge.color
+      = link_to cat.name, category_path(cat)
