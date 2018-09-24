@@ -5,9 +5,17 @@
 - @categories.each do |category|
   %ul.listing
     .row
-      .well.col-md-4.col-md-offset-4.center
-        %li.article-title
-          = link_to "#{ category.name }", category_path(category)
-        %li
-          %small
-            = pluralize(category.articles.count, "article")
+      .well.col-md-4.col-md-offset-4
+        .center
+          %li.article-title
+            = link_to "#{ category.name }", category_path(category)
+          %li
+            %small
+              = pluralize(category.articles.count, "article")
+        - if logged_in? && current_user.admin?
+          .article-actions
+            %li
+              = link_to "Edit", edit_category_path(category), class: "btn btn-xs btn-success"
+              = link_to "Delete", category_path(category), method: :delete,
+                class: "btn btn-xs btn-danger",
+                data: {confirm: "Are you sure you want to delete this category?"}

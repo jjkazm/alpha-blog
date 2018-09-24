@@ -1,5 +1,5 @@
 class Article < ApplicationRecord
-  has_many :article_categories
+  has_many :article_categories, dependent: :destroy
   has_many :categories, through: :article_categories
   belongs_to :user, counter_cache: true
   validates :title, presence: true, length: {minimum: 3, maximum: 80}
