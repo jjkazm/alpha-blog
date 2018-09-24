@@ -2,20 +2,26 @@
 .row
   .col-xs-12
     = form_for @article do |f|
-      .form-group
-        .control-label.col-sm-3
-          = f.label :title
-        .col-sm-9.form-control
-          = f.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true
-      .form-group
-        .control-label.col-sm-3
-          = f.label :description
-        .col-sm-9
-          = f.text_area :description, rows: 10, class: "form-control", placeholder: "Put your article here", autofocus: true
-      .form-group
-        .col-sm-12.col-sm-offset-3
-          =f.submit class: "btn btn-success"
-      .col-xs-4.col-xs-offset-5
-        [
-        =link_to "Back to listings", articles_path
-        ]
+      .form-horizontal
+        .form-group
+          .control-label.col-sm-3
+            = f.label :title
+          .col-sm-9
+            = f.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true
+        .form-group
+          .control-label.col-sm-3
+            = f.label :description
+          .col-sm-9
+            = f.text_area :description, rows: 10, class: "form-control", placeholder: "Put your article here", autofocus: true
+        .form-group
+          .col-sm-12.col-sm-offset-3
+            .row
+              =f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |cat|
+                = cat.label(class: "check_box, padding") {cat.check_box(class: "checkbox-inline")} + cat.text 
+        .form-group
+          .col-sm-12.col-sm-offset-3
+            =f.submit class: "btn btn-success"
+        .col-xs-4.col-xs-offset-5
+          [
+          =link_to "Back to listings", articles_path
+          ]
